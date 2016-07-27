@@ -5,7 +5,7 @@
 -- Twitter:                            https://twitter.com/enriquecatala
 --
 -- Returns the reverse of a string value.
---
+-- 
 CREATE FUNCTION inmemory.[REVERSE]
 (
 	@string_expression VARCHAR(MAX)
