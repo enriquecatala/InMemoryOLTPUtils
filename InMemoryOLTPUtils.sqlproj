@@ -136,9 +136,12 @@
     <Build Include="Schemas\inmemory.sql" />
     <Build Include="inmemory\Functions\CHARINDEX.sql" />
     <Build Include="inmemory\Stored Procedures\debug_CHARINDEX.sql" />
+    <Build Include="inmemory\Functions\REVERSE.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="InMemoryOLTPUtils.publish.xml" />
     <None Include="TESTS\Test-Contains.sql" />
+    <None Include="TESTS\Test-CHARINDEX.sql" />
+    <None Include="TESTS\Test-REVERSE.sql" />
   </ItemGroup>
 </Project>
