@@ -1,10 +1,4 @@
-﻿exec inmemory.debug_Contains_String 'test esto para tralari tralarala publicidadd','tralari tralara'
-
-SELECT  inmemory.Contains_String ('test esto para tralari tralarala publicidadd','tralari tralara')
-
-GO
-
-USE [InMemoryOLTPUtils];
+﻿USE [InMemoryOLTPUtils];
 GO
 CREATE  TABLE dbo.textos_ondisk
     (
@@ -19,7 +13,7 @@ GO
 /*
 SELECT   cast(textdata as varchar(max)) txt
 FROM    ::
-        fn_trace_gettable('D:\Clientes\tritium\dbaws001\Profiler\traza_dbaws001_2016-07-11 104525.trc',
+        fn_trace_gettable('D:\Clientes\dbaws001\Profiler\traza_dbaws001_2016-07-11 104525.trc',
                           1)
 */
 SET ANSI_NULLS ON;
