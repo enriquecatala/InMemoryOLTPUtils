@@ -8,9 +8,9 @@
 -- 
 CREATE FUNCTION inmemory.[REVERSE]
 (
-	@string_expression VARCHAR(MAX)
+	@string_expression VARCHAR(8000) -- There is a bug in SQL Server 2016 - 13.0.1708.0  that causes a CRASH when you try to use MAX and the string is more than 25k characters
 )
-RETURNS VARCHAR(MAX)
+RETURNS VARCHAR(8000) -- There is a bug in SQL Server 2016 - 13.0.1708.0  that causes a CRASH when you try to use MAX and the string is more than 25k characters
 WITH NATIVE_COMPILATION, SCHEMABINDING
 AS BEGIN ATOMIC WITH (
 	TRANSACTION ISOLATION LEVEL = SNAPSHOT,
@@ -25,15 +25,13 @@ AS BEGIN ATOMIC WITH (
 	--
         SET @i = @len;
        
-	-- loop until the size of the string or until we found that the string is found
-	--
-        WHILE ( @i >= 0 )
+	
+        WHILE ( @i > 0 )
            
             BEGIN  
-			    SET @return = @return+  SUBSTRING(@string_expression, @i, 1) ;         
+			    SET @return +=  SUBSTRING(@string_expression, @i, 1) ;         
                      
-					
-                SET @i = @i - 1;
+                SET @i -= 1;
             END;  
   
     

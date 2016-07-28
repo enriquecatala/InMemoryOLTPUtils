@@ -126,6 +126,7 @@
     <Folder Include="dbo" />
     <Folder Include="Schemas" />
     <Folder Include="TESTS" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Storage\InMemoryOLTP.sql" />
@@ -140,6 +141,7 @@
     <Build Include="inmemory\Functions\REPLICATE.sql" />
     <Build Include="inmemory\Functions\RIGHT.sql" />
     <Build Include="inmemory\Functions\LEFT.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetErrorInfo.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="InMemoryOLTPUtils.publish.xml" />
